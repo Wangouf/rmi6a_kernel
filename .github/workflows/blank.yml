@@ -6,16 +6,9 @@ jobs:
     name: "Build kernel"
     runs-on: ubuntu-latest
     steps:
-    - name: "Checkout kernel source"                  # Clone the kernel source.
-      uses: actions/checkout@v2
-      with:
-        repository: lemniskett/AnyKernel3             # Your own AnyKernel3 repository.
-        path: zipper                                  # Clone to path "zipper", REQUIRED.
-    - name: "Android kernel build"                    # Build kernel with lemniskett/android-kernel-actions.
-      uses: lemniskett/android-kernel-actions@master
-      with:
-        arch: arm64                                   # Specify arch
-        compiler: gcc/9                               # Specify toolchain to use
-        defconfig: vince_defconfig                    # Specify defconfig to use
-        image: Image.gz-dtb                           # Specify final build file
-      
+    - uses: actions/checkout@v1
+    - name: Build Kernel
+      run: |
+        chmod a+x ./build.sh
+        ./build.sh
+      shell: bash
