@@ -6,6 +6,8 @@ ls -a
 export ARCH=arm
 export SUBARCH=arm
 export CROSS_COMPILE=./arm-linux-androideabi-4.9/bin/arm-linux-androideabi-
+path = $(cd'dirnamr$0';pwd)/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-
+echo $path
 #make O=out certus_defconfig
 #make mrproper
 #make -j$(nproc) O=out 2>&1 | tee kernel.log
