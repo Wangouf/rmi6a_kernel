@@ -3,12 +3,12 @@ git clone --depth=1 https://android.googlesource.com/platform/prebuilts/gcc/linu
 git clone https://github.com/Wangouf/android_kernel_xiaomi_mt6765.git
 export ARCH=arm
 export SUBARCH=arm
+path=$(pwd)
 export CROSS_COMPILE=$(pwd)/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-
 cd ./android_kernel_xiaomi_mt6765
 make O=out certus_defconfig
 make mrproper
-
 make -j$(nproc) O=out
-zip -q out.zip ./out
-mv ./out.zip ..
+zip -q out.zip path/android_kernel_xiaomi_mt6765/out
+
 
