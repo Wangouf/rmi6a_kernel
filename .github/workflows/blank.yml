@@ -18,7 +18,7 @@ jobs:
 
         name: out
         # A file, directory or wildcard pattern that describes what to upload
-        path: ./out.zip
+        path: ./android_kernel_xiaomi_mt6765/out.zip
         # The desired behavior if no files are found using the provided path.
    
 
