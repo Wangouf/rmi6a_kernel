@@ -9,4 +9,4 @@
 #make -j$(nproc) O=out 2>&1 | tee kernel.log
 #zip -q out.zip ./out
 #mv ./out.zip ..
-torch out.zip
+touch out.zip
