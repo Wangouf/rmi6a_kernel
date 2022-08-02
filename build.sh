@@ -8,3 +8,5 @@ cd ./android_kernel_xiaomi_mt6762
 make O=out certus_defconfig
 make mrproper
 make -j$(nproc) O=out
+cd $path
+zip -q boot.zip $path/android_kernel_xiaomi_mt6762/out/arch/arm/boot
