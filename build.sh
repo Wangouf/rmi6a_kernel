@@ -5,6 +5,4 @@ export SUBARCH=arm
 path=$(pwd)
 export CROSS_COMPILE=$(pwd)/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-
 cd ./android_kernel_xiaomi_mt6762
-make O=out certus_defconfig
-make mrproper
-make -j$(nproc) O=out
+make kernelversion
