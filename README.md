@@ -1,2 +1,1 @@
-# rmi6a_kernel
-kkkkkk
+# build redmi6a kernels by Action
